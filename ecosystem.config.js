@@ -14,9 +14,12 @@ module.exports = {
     apps: [
         {
             name: 'stream-app',
-            script: 'server.js',
+            script: 'server.ts',
+            interpreter: 'node',
+            interpreter_args: '-r ts-node/register',
             watch: [
-                'server.js',
+                'server.ts',
+                'src/server',
             ],
             ignore_watch: [
                 'node_modules',
